@@ -1,0 +1,2 @@
+CI_REGISTRY_USER: Your Docker registry username.
+CI_REGISTRY_PASSWORD: Your Docker registry password.
