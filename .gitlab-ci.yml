@@ -1,2 +1,24 @@
-CI_REGISTRY_USER: Your Docker registry username.
-CI_REGISTRY_PASSWORD: Your Docker registry password.
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - deploy
+
+variables:
+  CONTAINER_IMAGE: "janakbhanushali/hoewarmishetindelft:latest"
+
+before_script:
+  - docker info
+
+build:
+  stage: build
+  script:
+    - docker build -t $CONTAINER_IMAGE .
+
+deploy:
+  stage: deploy
+  script:
+    - docker run $CONTAINER_IMAGE
