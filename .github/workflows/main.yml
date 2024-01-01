@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      DOCKER_USERNAME: janakbhanushali
+      DOCKER_PASSWORD: dckr_pat_rmIQWrZ8INxC6lqve6uZGSRBqHk
 
     steps:
     - name: Checkout code
@@ -25,10 +25,6 @@ jobs:
 
     - name: Login to Docker Hub
       run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
