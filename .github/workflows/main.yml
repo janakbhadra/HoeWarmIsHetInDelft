@@ -16,7 +16,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: HoeWarmIsHetInDelft/Dockerfile:latest
+          tags: HoeWarmIsHetInDelft/temp_docker:latest
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
