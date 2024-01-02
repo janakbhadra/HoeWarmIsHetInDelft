@@ -21,12 +21,12 @@ ChromeDriver (included in the project using chromedriver-py)
 
 ## Usage
   The script Launches a headless Chrome browser, navigate to a specific website, and extract the current temperature. 
+  
   If running locally without Docker:
     ```bash
     python your_script.py
 
-
-#### Configuration
+## Configuration
   No additional configuration is required. The script uses the default settings for ChromeDriver.
 
 #### Docker Configuration
