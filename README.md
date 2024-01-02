@@ -32,6 +32,9 @@ This Python script fetches the current temperature from a specific website using
 ## Docker Configuration
   The Dockerfile provided in the repository automates the setup of the required dependencies and runs the Python script within a Docker container.
 
+## GitHub Actions
+  The project includes a GitHub Actions workflow for building, testing, and deploying the Docker image.
+
 ## Contributing
   If you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
