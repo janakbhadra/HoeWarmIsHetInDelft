@@ -2,9 +2,9 @@
 This Python script fetches the current temperature from a specific website using Selenium and Chrome. It extracts the temperature value and prints it in both the original format and as an integer in degrees Celsius. Additionally, a Dockerfile is provided to containerize the application.
 
 ## Prerequisites
-Python 3.x
-Google Chrome installed
-ChromeDriver (included in the project using chromedriver-py)
+1. Python 3.x
+2. Google Chrome installed
+3. ChromeDriver (included in the project using chromedriver-py)
 
 ## Installation
   1. Clone the repository:
