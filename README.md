@@ -18,7 +18,7 @@ docker build -t your-image-name .
 3. Run the Docker container:
 docker run -p 80:80 your-image-name
 
-## Usage
+### Usage
 If running locally without Docker:
 ```bash
 python your_script.py
@@ -26,19 +26,19 @@ python your_script.py
 If running with Docker, access the application at http://localhost:80.
 The script will launch a headless Chrome browser, navigate to a specific website, and extract the current temperature.
 
-## Configuration
+### Configuration
 No additional configuration is required. The script uses the default settings for ChromeDriver.
 
-## Docker Configuration
+### Docker Configuration
 The Dockerfile provided in the repository automates the setup of the required dependencies and runs the Python script within a Docker container.
 
-## Contributing
+### Contributing
 If you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
-## License
+### License
 This project is licensed under the MIT License.
 
-## Acknowledgments
+### Acknowledgments
 Selenium - Web browser automation framework
 chromedriver-py - ChromeDriver binary package for Python
 
