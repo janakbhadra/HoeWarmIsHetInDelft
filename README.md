@@ -8,23 +8,30 @@ ChromeDriver (included in the project using chromedriver-py)
 
 ## Installation
 1. Clone the repository:
+```bash
 git clone https://github.com/your-username/your-repository.git
+'''
 
-2. Build the Docker image:
+3. Build the Docker image:
+```bash
 docker build -t your-image-name .
+'''
 
-3. Run the Docker container:
+4. Run the Docker container:
+```bash
 docker run -p 80:80 your-image-name
+'''
 
-#### Usage
+## Usage
 If running locally without Docker:
 ```bash
 python your_script.py
+'''
 
 If running with Docker, access the application at http://localhost:80.
 The script will launch a headless Chrome browser, navigate to a specific website, and extract the current temperature.
 
-#### Configuration
+## Configuration
 No additional configuration is required. The script uses the default settings for ChromeDriver.
 
 #### Docker Configuration
