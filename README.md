@@ -18,7 +18,7 @@ docker build -t your-image-name .
 3. Run the Docker container:
 docker run -p 80:80 your-image-name
 
-## **Usage**
+## Usage
 If running locally without Docker:
 ```bash
 python your_script.py
@@ -26,7 +26,7 @@ python your_script.py
 If running with Docker, access the application at http://localhost:80.
 The script will launch a headless Chrome browser, navigate to a specific website, and extract the current temperature.
 
-## **Configuration**
+## Configuration
 No additional configuration is required. The script uses the default settings for ChromeDriver.
 
 ## Docker Configuration
