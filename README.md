@@ -21,10 +21,16 @@ This Python script fetches the current temperature from a specific website using
 
 ## Usage
   The script Launches a headless Chrome browser, navigate to a specific website, and extract the current temperature. 
-  
-  1. If running locally without Docker:
+  To Test Python Script on Local System:
+  1. Install dependencies
+      ```bash
+      pip install selenium
+      pip install chromedriver-py
+      
+  2. Run the Python script:
      ```bash
-     python your_script.py
+      python your_script.py
+
 
 ## Configuration
   No additional configuration is required. The script uses the default settings for ChromeDriver.
