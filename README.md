@@ -29,7 +29,7 @@ This Python script fetches the current temperature from a specific website using
       
   2. Run the Python script:
      ```bash
-      python your_script.py
+      python HoeWarmIsHetInDelft.py
 
 
 ## Configuration
