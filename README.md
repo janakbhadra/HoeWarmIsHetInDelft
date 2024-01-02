@@ -6,7 +6,7 @@ Python 3.x
 Google Chrome installed
 ChromeDriver (included in the project using chromedriver-py)
 
-#### Installation
+## Installation
 1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/your-repository.git
