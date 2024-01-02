@@ -9,9 +9,9 @@ This Python script fetches the current temperature from a specific website using
 ## Installation
   1. Clone the repository:
      ```bash
-     git clone https://github.com/your-username/your-repository.git
+     git clone https://github.com/janakbhadra/HoeWarmIsHetInDelft.git
      
-  2. Build the Docker image:
+  2. Build the Docker image (If you want to test script local using docker desktop):
      ```bash docker
      build -t your-image-name .
 
