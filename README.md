@@ -10,17 +10,14 @@ ChromeDriver (included in the project using chromedriver-py)
   1. Clone the repository:
      ```bash
      git clone https://github.com/your-username/your-repository.git
-     '''
      
   2. Build the Docker image:
      ```bash docker
      build -t your-image-name .
-     '''
 
   4. Run the Docker container:
      ```bash
      docker run -p 80:80 your-image-name
-     '''
 
 ## Usage
   If running locally without Docker:
