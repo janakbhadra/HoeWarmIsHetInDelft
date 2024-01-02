@@ -13,9 +13,7 @@ ChromeDriver (included in the project using chromedriver-py)
      '''
      
   2. Build the Docker image:
-    ```bash
-    docker build -t your-image-name .
-    '''
+    ```bash docker build -t your-image-name . '''
 
   4. Run the Docker container:
     ```bash
