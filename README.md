@@ -39,8 +39,8 @@ This Python script fetches the current temperature from a specific website using
   If you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
 ## Acknowledgments
-  Selenium - Web browser automation framework
-  chromedriver-py - ChromeDriver binary package for Python
+  1. Selenium - Web browser automation framework
+  2. chromedriver-py - ChromeDriver binary package for Python
 
 Feel free to customize the README file further based on your specific project details and needs. Additionally, update the placeholders like [Your Project Title], [your-username], and [your-repository] with your actual project details.
 
