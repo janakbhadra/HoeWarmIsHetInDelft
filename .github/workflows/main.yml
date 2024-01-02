@@ -1,4 +1,4 @@
-name: Docker Build and Run
+name: Build and Test
 
 on:
   push:
@@ -9,30 +9,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      DOCKER_USERNAME: janakbhanushali
-      DOCKER_PASSWORD: dckr_pat_rmIQWrZ8INxC6lqve6uZGSRBqHk
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12.1
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
 
-    - name: Login to Docker Hub
-      run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+      - name: Login to Docker Registry
+        run: echo ${{ secrets.DOCKER_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        env:
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        file: ./Dockerfile
-        push: true
-        tags: temp_docker:latest
+      - name: Build Docker Image
+        run: |
+          docker build -t ghcr.io/${{ github.repository_owner }}/myapp:latest .
+        working-directory: ${{ github.workspace }}
 
-    - name: Run the Docker container
-      run: docker run -p 8080:80 temp_docker:latest
+      - name: Push Docker Image
+        run: |
+          docker push ghcr.io/${{ github.repository_owner }}/temperature:latest
+        working-directory: ${{ github.workspace }}
+
+      - name: Test Docker Image
+        run: |
+          docker run ghcr.io/${{ github.repository_owner }}/temperature:latest python HoeWarmIsHetInDelft.py
+        working-directory: ${{ github.workspace }}
