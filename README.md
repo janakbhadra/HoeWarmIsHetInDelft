@@ -29,13 +29,13 @@ ChromeDriver (included in the project using chromedriver-py)
 ## Configuration
   No additional configuration is required. The script uses the default settings for ChromeDriver.
 
-#### Docker Configuration
+## Docker Configuration
   The Dockerfile provided in the repository automates the setup of the required dependencies and runs the Python script within a Docker container.
 
-#### Contributing
+## Contributing
   If you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
-#### Acknowledgments
+## Acknowledgments
   Selenium - Web browser automation framework
   chromedriver-py - ChromeDriver binary package for Python
 
