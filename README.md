@@ -1,42 +1,48 @@
-Project Title
-[HoeWarmIsHetInDelft]
+## Description
+This Python script fetches the current temperature from a specific website using Selenium and Chrome. It extracts the temperature value and prints it in both the original format and as an integer in degrees Celsius. Additionally, a Dockerfile is provided to containerize the application.
 
-Description
-This Python script fetches the current temperature from specific Website using Selenium and Chrome Browser. It extracts the temperature value and prints it in both the original format and as an integer in degrees Celsius.
-
-Prerequisites
+## Prerequisites
 Python 3.x
 Google Chrome installed
 ChromeDriver (included in the project using chromedriver-py)
-Installation
-Clone the repository:
 
+## Installation
+1. Clone the repository:
 ```bash
 git clone https://github.com/your-username/your-repository.git
-Install dependencies:
 
+2. Build the Docker image:
 ```bash
-pip install -r requirements.txt
-Usage
-Run the Python script:
+docker build -t your-image-name .
 
+3. Run the Docker container:
+docker run -p 80:80 your-image-name
+
+## **Usage**
+If running locally without Docker:
 ```bash
 python your_script.py
+
+If running with Docker, access the application at http://localhost:80.
 The script will launch a headless Chrome browser, navigate to a specific website, and extract the current temperature.
 
-Configuration
+## **Configuration**
 No additional configuration is required. The script uses the default settings for ChromeDriver.
 
-Contributing
+## Docker Configuration
+The Dockerfile provided in the repository automates the setup of the required dependencies and runs the Python script within a Docker container.
+
+## Contributing
 If you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Acknowledgments
+## Acknowledgments
 Selenium - Web browser automation framework
 chromedriver-py - ChromeDriver binary package for Python
-Feel free to customize the README file based on your specific project details and needs. Additionally, you can include information about any known issues, troubleshooting tips, or other relevant details.
+
+Feel free to customize the README file further based on your specific project details and needs. Additionally, update the placeholders like [Your Project Title], [your-username], and [your-repository] with your actual project details.
 
 
 
